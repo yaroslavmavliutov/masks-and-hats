@@ -176,8 +176,8 @@ def apply_masks(input_paths, masks, output_paths, apply_unique_masks, is_video):
             try:
                 for c in range(0,3):
                     out[0:out.shape[0],0:out.shape[1], c] =  aligned_mask[:,:,c] * (aligned_mask[:,:,3]/255.0) +  out[0:out.shape[0], 0:out.shape[1], c] * (1.0 - aligned_mask[:,:,3]/255.0)
-            except Exception, e:
-                print(e)
+            except: #Exception, e:
+                #print(e)
                 pass
         
         if not is_video:
