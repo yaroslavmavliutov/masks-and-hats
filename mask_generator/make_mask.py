@@ -1,5 +1,5 @@
 import sys
-import locator
+from mask_generator import locator
 import numpy as np
 import cv2
 import subprocess
